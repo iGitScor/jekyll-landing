@@ -1,0 +1,78 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "main";
+
+$background-url: '';
+$background-color: #f5f3f1;
+$headline-color: #fff;
+$cat_title-color: #eaa500;
+$cat_text-color: #666666;
+$item_title-color: #4c4c4c;
+$item_brand-color: $brand-primary;
+
+@import "template";
+
+.content-wrapper {
+    background: #f5f3f1;
+}
+
+
+/*** CUSTOM BLOCKS
+   ====================================================================== */
+
+.headline {
+    .desc {
+        p {
+            color: $gray-base;
+        }
+        .sub {
+            text-align: right;
+            font-size: .8em;
+        }
+    }
+
+    @media (max-width: $screen-sm-min) {
+        .illus {
+            text-align: center;
+        }
+    }
+}
+
+.definition {
+    padding: 30px 0 20px 0;
+    background-color: #FFF;
+
+    .desc {
+        h2 {
+            display: inline-block;
+            padding: 20px 18px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: $font-size-h3;
+            font-family: $font-family-brand;
+            color: #FFF;
+            background-color: #000;
+            .strong {
+                font-family: $font-family-brand-bold;
+            }
+        }
+        p {}
+    }
+}
+
+.product-list {
+    .cat-intro {
+        min-height: 130px;
+        text-align: center;
+    }
+    ul {
+        > li {
+            text-align: center;
+            .title {
+                margin-bottom: 0.2em;
+            }
+        }
+    }
+}

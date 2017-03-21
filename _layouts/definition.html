@@ -1,0 +1,72 @@
+---
+layout: post
+css: definition.css
+---
+
+{% include template/post.html %}
+
+<section class="headline">
+  <div class="container">
+    <div class="row">
+      <div class="desc col-sm-7 col-sm-offset-1">
+        <h1>
+        {{ page.data.headline.title }}<br />
+        <span class="sub">{{ page.data.headline.sub }}</span>
+        </h1>
+        <div class="clearfix"></div>
+        <p>{{ page.data.headline.desc }}</p>
+      </div>
+      <div class="illus col-sm-4">
+        <!-- <img src="/assets/post/{{ page.name }}/{{ page.data.headline.illus_src }}" alt="Illustration {{ page.data.headline.illus }}" class="img-responsive"/> -->
+        <img src="http://placehold.it/256x256/eeefff/146FAD" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="definition">
+  <div class="container">
+    <div class="row">
+      <div class="illus col-sm-4">
+        <!-- <img src="/assets/post/{{ page.name }}/{{ page.data.definition.illus_src }}" alt="{{ page.data.definition.illus }}" class="img-responsive"/> -->
+        <img src="http://placehold.it/240x170/eeefff/146FAD" alt="">
+      </div>
+      <div class="desc col-sm-8">
+        <h2>{{ page.data.definition.title }}</h2>
+        <p class="text-medium">{{ page.data.definition.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container product-list">
+  <div class="row">
+    {% assign imageIndex = 0 %}
+    {% for row in page.data.product_row %}
+      <div class="cat-intro clearfix">
+        <h3>{{ row.title }}</h3>
+        <p>{{ row.desc }}</p>
+      </div>
+
+      <ul class="list-unstyled clearfix">
+        {% for product in row.product_list %}
+        {% assign imageIndex = imageIndex | plus : '1' %}
+          <li class="col-sm-4">
+            <p class="illus">
+              <a href="{{ product.href }}" title="{{ product.title }}">
+                <!-- <img src="/assets/post/{{ page.name }}/{{ 'illus-product' | append : imageIndex | append : '.jpg' }}" alt="Illustration" class="img-responsive"/> -->
+                <img src="http://placehold.it/240x240/eeefff/146FAD" alt="">
+              </a>
+            </p>
+            <p class="title">{{ product.title | raw }}</p>
+            <p class="brand">{{ product.subtitle | raw }}</p>
+            <p class="action">
+              <a href="{{ product.href }}" title="{{ product.title | raw }}" class="btn btn-primary btn-lg text-uppercase"><i class="fa fa-custom"></i> Call to action &gt;&gt;</a>
+            </p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </div>
+</div>
+</section>

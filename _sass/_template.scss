@@ -1,0 +1,293 @@
+/***
+TABLE OF CONTENTS
+
+* Page structure *
+Wrapper divs
+Header
+Nav
+Footer
+
+* Custom blocks *
+headline
+social-links
+product-list
+
+* Miscellaneous *
+Utilities
+Buttons
+
+***/
+
+
+/*** PAGE STRUCTURE
+   ====================================================================== */
+
+
+/* WRAPPER DIVS */
+
+
+/**
+*
+* Divs that wrap main blocks
+* Helps for styling and positionning purpose
+*
+*/
+
+@if variable-exists(background-url) {
+    #site-wrapper {
+        background: url($background-url) top no-repeat $background-color;
+    }
+} @else {
+    #site-wrapper {
+        background-color: $background-color;
+    }
+}
+
+.content-wrapper {
+    > .container {
+        padding-bottom: 40px;
+    }
+}
+
+
+/* HEADER */
+
+#header {
+    background-color: #FFF;
+}
+
+.header-top {
+    color: #FFF;
+    font-family: $font-family-brand;
+    background: $gray-base;
+    h1 {
+        margin: 0px;
+        line-height: $line-height-computed;
+        font-size: $font-size-small;
+    }
+}
+
+.header-mid {
+    padding: $padding-large-vertical;
+    .logo {
+        text-align: center;
+    }
+    .delivery-point {
+        padding-top: $padding-large-vertical;
+        text-align: center;
+        .picto {
+            display: inline-block;
+            margin-right: 5px;
+            vertical-align: middle;
+            font-size: 32px;
+        }
+        .txt {
+            display: inline-block;
+            width: 50%;
+            text-align: left;
+            line-height: 1.1;
+            vertical-align: middle;
+        }
+        @media (min-width: $screen-sm-min) {
+            float: right;
+            text-align: right;
+        }
+    }
+}
+
+
+/* FOOTER */
+
+#footer {
+    > * {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        border-top: 1px solid #eee;
+    }
+}
+
+
+/*** CUSTOM BLOCKS
+   ====================================================================== */
+
+.headline {
+    padding: 10px 0;
+    .desc {
+        h1 {
+            margin-bottom: 20px;
+            color: #047185;
+            font-family: $font-family-brand;
+            font-size: $font-size-h1;
+            text-transform: uppercase;
+        }
+        .sub {
+            display: block;
+            img {
+                display: inline-block;
+            }
+        }
+        p {
+            color: $headline-color;
+            font-size: 16px;
+            font-family: $font-family-brand;
+        }
+    }
+    .illus {
+        img {
+            display: inline-block;
+        }
+    }
+}
+
+.socials-links {
+    padding-bottom: 20px;
+    .title {
+        color: #8A888E;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .action {
+        text-align: center;
+        a {
+            display: inline-block;
+        }
+        > iframe {
+            vertical-align: middle;
+        }
+    }
+}
+
+.product-list {
+    .cat-intro {
+        padding: 0 10%;
+        text-align: center;
+        h3 {
+            text-align: center;
+            text-transform: uppercase;
+            color: $cat_title-color;
+            font-family: $font-family-brand;
+            font-size: $font-size-h3;
+        }
+        p {
+            color: $cat_text-color;
+            font-family: $font-family-brand;
+            font-size: $font-size-medium;
+        }
+    }
+    ul {
+        > li {
+            position: relative;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            .illus {
+                text-align: center;
+                @media screen and (min-width: $screen-sm-min) {
+                    text-align: left;
+                }
+                img {
+                    display: inline-block;
+                }
+            }
+            .title {
+                margin-bottom: 0;
+                line-height: 1em;
+                color: $item_title-color;
+                font-size: $font-size-base;
+                font-family: $font-family-brand;
+                text-transform: uppercase;
+            }
+            .brand {
+                color: $item_brand-color;
+                font-size: $font-size-base;
+                font-family: $font-family-brand-bold;
+                text-transform: uppercase;
+            }
+            .desc {
+                font-family: $font-family-brand-italic;
+            }
+            .action {
+                margin-top: 30px;
+                a {}
+            }
+        }
+    }
+}
+
+
+/*** MISCELLANEOUS
+   ====================================================================== */
+
+
+/* UTILITIES */
+
+
+/**
+*
+* Set of atomic classes that help a lot
+*
+*/
+
+.rowS {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    overflow: hidden;
+    > * {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.hidden-link {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+strong,
+.strong {
+    font-family: $font-family-brand-bold;
+}
+
+.text-small {
+    font-size: $font-size-small;
+}
+
+.text-medium {
+    font-size: $font-size-medium;
+}
+
+.text-large {
+    font-size: $font-size-large;
+}
+
+
+/* BUTTON */
+
+
+/**
+*
+* Everything that's concern button customization
+*
+*/
+
+.btn {
+    font-family: $font-family-brand;
+    border-radius: 0;
+}
+
+.btn-secondary {
+    @include button-variant( $btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+
+.fa-custom {
+    width: 30px;
+    height: 17px;
+    background: url('http://placehold.it/32x32/eeefff/146FAD') 0px no-repeat;
+}
+
+.btn-lg {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}

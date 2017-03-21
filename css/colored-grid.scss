@@ -1,0 +1,170 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "main";
+
+$background-color: #009cdf;
+$headline-color: #fff;
+$cat_title-color: #eaa500;
+$cat_text-color: #666666;
+$item_title-color : $text-color;
+$item_brand-color : $brand-primary;
+
+
+@import "template";
+
+
+.headline {
+    margin-bottom: 120px;
+    padding: 10px 0;
+}
+
+
+.product-list {
+    ul {
+        > li {
+            .title, .brand {
+                font-size: $font-size-h2;
+            }
+            &.item0 {
+                background-color: #dfe3e4;
+                @media screen and (min-width: $screen-sm-min) {
+                    .illus {
+                        img {
+                            position: absolute;
+                            top: -75px;
+                        }
+                    }
+                }
+            }
+            &.item1 {
+                background-color: #ffdda8;
+                @media screen and (min-width: $screen-sm-min) {
+                    margin-top: 130px;
+                    padding-top: 85px;
+                    z-index: 80;
+                    .illus {
+                        img {
+                            position: absolute;
+                            top: -180px;
+                        }
+                    }
+                    .txt {
+                        text-align: right;
+                        padding-right: 0;
+                    }
+                }
+            }
+            &.item2 {
+                background-color: #9dd8ff;
+                @media screen and (min-width: $screen-sm-min) {
+                    z-index: 60;
+                    margin-top: -60px;
+                    .illus {
+                        img {
+                            position: absolute;
+                            top: -80px;
+                        }
+                    }
+                    .txt {
+                        padding-top: 70px;
+                        padding-right: 200px;
+                    }
+                    .action {
+                        position: absolute;
+                        top: 115px;
+                        right: 0;
+                    }
+                }
+            }
+            &.item3 {
+                background-color: #ffecec;
+                @media screen and (min-width: $screen-sm-min) {
+                    z-index: 80;
+                    margin-top: -10px;
+                }
+            }
+            &.item4 {
+                background-color: #daffd3;
+                margin-top: 20px;
+            }
+            &.item5 {
+                background-color: #fff7ad;
+                @media screen and (min-width: $screen-sm-min) {
+                    margin-top: -30px;
+                    padding-top: 30px;
+                    z-index: 60;
+                    .illus {
+                        img {
+                            position: absolute;
+                            top: -150px;
+                        }
+                    }
+                    .txt {
+                        text-align: right;
+                    }
+                }
+            }
+            &.item6 {
+                background-color: #effdff;
+                @media screen and (min-width: $screen-sm-min) {
+                    z-index: 80;
+                    .illus {
+                        img {
+                            position: absolute;
+                            top: -70px;
+                        }
+                    }
+                }
+            }
+            &.item7 {
+                background-color: #ffe2d7;
+                padding-bottom: 11px;
+                @media screen and (min-width: $screen-sm-min) {
+                    .illus {
+                        padding: 0;
+                    }
+                    .txt {
+                        padding-left: 0;
+                    }
+                }
+                .action {
+                    margin-top: 10px;
+                }
+            }
+            &.item8 {
+                background-color: #eee7ff;
+                @media screen and (min-width: $screen-sm-min) {
+                    z-index: 80;
+                    .illus {
+                        img {
+                            position: absolute;
+                            top: -70px;
+                        }
+                    }
+                    .txt {
+                        padding: 0;
+                        text-align: right;
+                    }
+                }
+            }
+            &.item9 {
+                background-color: #fafda3;
+                @media screen and (min-width: $screen-sm-min) {
+                    padding-right: 0;
+                    .txt {
+                        padding: 0;
+                        text-align: right;
+                    }
+                    .illus {
+                        padding: 0;
+                    }
+                    .action {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie7" lang="fr"><![endif]-->
+<!--[if IE 7]><html class="ie7" lang="fr"><![endif]-->
+<!--[if IE 8]><html class="ie8" lang="fr"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="fr"><![endif]-->
+<!--[if !IE]>-->
+<html lang="fr">
+<!--<![endif]-->
+
+  {% include layout/head.html %}
+
+  <body>
+    <div id="site-wrapper">
+      <header id="header" class="header-wrapper">
+        {% include layout/header.html %}
+      </header>
+
+      <article class="content-wrapper">
+       {{ content }}
+      </article>
+
+      <footer id="footer" class="footer-wrapper">
+        {% include layout/footer.html %}
+      </footer>
+
+    </div>
+
+    <!-- Application  Script -->
+  </body>
+</html>
